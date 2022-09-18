@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component should render without crash 1`] = `
+<div>
+  <div
+    class="sc-bczRLJ NFeCt show"
+  >
+    <div
+      class="sc-gsnTZi gVgvKC"
+    >
+      <i
+        class="sc-dkzDqf dmOPiU fa-solid fa-xmark"
+        data-testid="closemodal"
+      />
+      <h1>
+        Modal contenido
+      </h1>
+    </div>
+  </div>
+</div>
+`;
