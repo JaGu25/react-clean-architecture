@@ -6,15 +6,25 @@ import PokemonStyled from './Pokemon.styled'
 import { useEffect } from 'react';
 import PokemonService from '../../services/pokemon.service';
 import { FirstAppRoutes } from '../../routes/routes';
+import { useDispatch } from 'react-redux';
+import { fetching, stopFetching } from '../../../../store/reducer';
 
 const Pokemon = () => {
     const { pokemon, setPokemon } = useFirstAppContext()
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     useEffect(() => {
         const getPokemon = async () => {
-            const pokemon = await PokemonService.getPokemon("1");
-            setPokemon(pokemon)
+            try {
+                dispatch(fetching())
+                const pokemon = await PokemonService.getPokemon("1");
+                setPokemon(pokemon)
+                dispatch(stopFetching())
+            } catch (error) {
+                console.log(error)
+            }
+
         }
         getPokemon()
 
