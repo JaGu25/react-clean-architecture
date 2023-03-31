@@ -1,7 +1,7 @@
 import { Note, NoteResponse } from "../domain/notes"
 import { getNotesAdapter } from '../adapters/notes.adapters';
  
-const BASE_API = "http://52.207.208.252:8080"
+const BASE_API = import.meta.env.VITE_API_SERVER;
 
 const getNotes = async (): Promise<Note[]> => {
     const response = await fetch(BASE_API);
