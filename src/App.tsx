@@ -3,6 +3,7 @@ import AppRouter from './routes/AppRouter';
 import { useSelector } from 'react-redux';
 import { GlobalState } from './store/reducer';
 import Loading from './shared/components/Loading/Loading';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 

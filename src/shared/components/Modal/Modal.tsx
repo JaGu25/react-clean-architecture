@@ -1,4 +1,4 @@
-import React, { Children, Dispatch, SetStateAction, useRef } from 'react'
+import React, { Dispatch, SetStateAction, useRef } from 'react'
 import useOutsideElement from '../../hooks/useClickOutsideElement'
 import useKeypress from '../../hooks/useKeypress'
 import ModalStyled from './Modal.styled'

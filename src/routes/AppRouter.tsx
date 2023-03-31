@@ -3,9 +3,11 @@ import {
     Routes,
     Route
 } from 'react-router-dom'
-import { lazy } from 'react';
+import { lazy } from 'react'
+
 const FirstAppRouter = lazy(() => import(/* webpackChunkName: "FirstAppRouter" */ '../app/firstApp/routes/FirstAppRouter'))
 const SecondAppRouter = lazy(() => import(/* webpackChunkName: "SecondAppRouter" */ '../app/secondApp/routes/SecondAppRouter'))
+const CrudAppRouter = lazy(() => import(/* webpackChunkName: "CrudAppRouter" */ '../app/crudApp/routes/crudAppRouter'))
 const AuthRouter = lazy(() => import(/* webpackChunkName: "AuthRouter" */ '../app/auth/routes/AuthRouter'))
 
 const AppRouter = () => {
@@ -13,6 +15,7 @@ const AppRouter = () => {
         <Router>
             <Routes>
                 <Route path="/pokemon/*" element={<FirstAppRouter />} />
+                <Route path="/crud/*" element={<CrudAppRouter />} />
                 <Route path="/rick-morty/*">
                     <Route path='' element={<SecondAppRouter />} />
                 </Route>
