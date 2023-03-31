@@ -86,6 +86,7 @@ interface CardAction {
 
 const NotesCardAction = styled.i<CardAction>`
     cursor: pointer;
+    font-size: ${fontSizes.base};
     color: ${({ color }) => `${color}`};;
 `
 
