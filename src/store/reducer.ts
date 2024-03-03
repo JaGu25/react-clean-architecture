@@ -23,7 +23,7 @@ const GlobalSlice = createSlice({
     initialState,
     reducers: {
         addUser(state, action: PayloadAction<User>) {
-            state.user = action.payload
+            state.user = action.payload;
         },
         fetching(state) {
             state.pendingFetching++;

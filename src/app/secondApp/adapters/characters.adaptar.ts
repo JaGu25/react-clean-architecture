@@ -6,7 +6,7 @@ export const getRickAndMortyCharactersAdapter = (
     charactersResponse.map(characterResponse => ({
         id: characterResponse.id,
         name: characterResponse.name,
-        description: `Origin: ${characterResponse.origin.name}, Locatin: ${characterResponse.location.name}`,
+        description: `Origin: ${characterResponse.origin.name}, Location: ${characterResponse.location.name}`,
         image: characterResponse.image,
     }))
 )
